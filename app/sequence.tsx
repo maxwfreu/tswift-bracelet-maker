@@ -73,7 +73,6 @@ export const SequenceMatcher = ({
         <button className="border rounded-md px-2 py-4 mt-2">
           Find Matching Lyrics!
         </button>
-        <button>Find a random word</button>
       </form>
       {matched.length > 0 && (
         <div>
