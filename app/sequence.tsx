@@ -8,7 +8,6 @@ export const SequenceMatcher = ({ lyrics }: { lyrics: string[] }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const getSequence: FormEventHandler = async (e) => {
     e.preventDefault();
-    console.log("searching for", searchTerm);
     if (!searchTerm) {
       setMatched([]);
       return;
@@ -21,7 +20,7 @@ export const SequenceMatcher = ({ lyrics }: { lyrics: string[] }) => {
       if (!lyrics[i] || !lyrics[i][0]) {
         continue;
       }
-      if (lyrics[i][0].toLowerCase() === searchTerm[index]) {
+      if (lyrics[i][0].toLowerCase() === searchTerm[index].toLowerCase()) {
         words.push(lyrics[i]);
         index++;
       } else {

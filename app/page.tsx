@@ -22,9 +22,9 @@ export default async function Home() {
   const lyrics = await getLyrics();
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-24">
+    <main className="flex min-h-screen flex-col items-center p-12 md:p-24">
       <h1 className="leading-8 text-3xl mb-12">
-        Find T Swift lyrics that match a sequence
+        Type in a sequence of letters to find matching Taylor Swift lyrics!
       </h1>
       <SequenceMatcher lyrics={lyrics} />
     </main>
